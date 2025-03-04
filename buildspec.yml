@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18  # Hoặc phiên bản khác bạn dùng
+    commands:
+      - npm install -g aws-cdk
+      - npm install -g sst
+      - npm install
+  build:
+    commands:
+      - npx sst build
+  post_build:
+    commands:
+      - npx sst deploy --stage prod  # Deploy lên môi trường production
