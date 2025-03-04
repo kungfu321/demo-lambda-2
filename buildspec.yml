@@ -10,7 +10,4 @@ phases:
       - npm install
   build:
     commands:
-      - npx sst build
-  post_build:
-    commands:
-      - npx sst deploy --stage prod  # Deploy lên môi trường production
+      - npx sst deploy --stage prod
