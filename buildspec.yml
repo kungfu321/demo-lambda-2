@@ -9,4 +9,4 @@ phases:
       - npm install
   build:
     commands:
-      - npx sst deploy --stage prod
+      - npx sst remove --stage prod
