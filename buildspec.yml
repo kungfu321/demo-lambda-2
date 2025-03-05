@@ -6,8 +6,7 @@ phases:
       nodejs: 18
     commands:
       - npm install -g aws-cdk
-      - npm install -g sst
       - npm install
   build:
     commands:
-      - sst deploy --stage prod
+      - npx sst deploy --stage prod
