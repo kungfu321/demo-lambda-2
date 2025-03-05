@@ -10,5 +10,4 @@ phases:
       - npm install
   build:
     commands:
-      - echo "AWS Account: $(aws sts get-caller-identity)"
       - sst deploy --stage prod
