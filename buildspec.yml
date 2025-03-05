@@ -3,11 +3,13 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18  # Hoặc phiên bản khác bạn dùng
+      nodejs: 18
     commands:
       - npm install -g aws-cdk
       - npm install -g sst
       - npm install
   build:
     commands:
+      - echo "AWS Account: $(aws sts get-caller-identity)"
       - sst deploy --stage prod
+
